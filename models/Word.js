@@ -7,11 +7,11 @@ Entry.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            primaryKey: true,
             autoIncrement: true
         },
         word: {
             type: DataTypes.STRING,
+            primaryKey: true,
             allowNull: false
         },
         definition: {
