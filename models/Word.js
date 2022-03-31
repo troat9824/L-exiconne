@@ -1,30 +1,39 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Entry extends Model {}
+class Word extends Model {}
 
-Entry.init(
+Word.init(
     {
         id: {
             type: DataTypes.INTEGER,
+            primaryKey: true,
+            allowNull: false,
             autoIncrement: true
         },
         word: {
             type: DataTypes.STRING,
-            primaryKey: true,
             allowNull: false
         },
         definition: {
             type: DataTypes.TEXT,
             allowNull: false
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
         }
     },
     {
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'entry'
+        modelName: 'word'
     }
 );
 
-module.exports = Entry;
+module.exports = Word;
