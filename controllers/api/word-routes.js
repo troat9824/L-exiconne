@@ -21,10 +21,10 @@ router.get('/', (req, res) => {
 });
 
 // get one word
-router.get('/:id', (req, res) => { //should this be '/:word'?
+router.get('/:word', (req, res) => { //should this be '/:word'?
     Word.findOne({
         where: {
-            id: req.params.word //is this right? Since we aren't searching by id #?
+            word: req.params.word //is this right? Since we aren't searching by id #?
         },
         attributes: [
             'id',

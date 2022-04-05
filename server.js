@@ -10,10 +10,10 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sequelize = require('./config/connection');
 
 const sess = {
-    secret: 'Super secret secret', // maybe we change this?
+    secret: 'Frau Kepetri',
     cookie: {},
-    resace: false,
-    saveUninitialized: true,
+    resave: false,
+    saveUninitialized: false,
     store: new SequelizeStore({
         db: sequelize
     })
@@ -21,14 +21,13 @@ const sess = {
 
 app.use(session(sess));
 
-/* I don't know if we need this since we're not using helpers
 const helpers = require('./utils/helpers');
 
 const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-*/
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
