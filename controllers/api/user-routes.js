@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// get User by id: again, is this soemthing that we'll actually need?
+// get User by id: again, is this something that we'll actually need?
 router.get('/:id', (req, res) => {
   User.findOne({
     attributes: { exclude: ['password'] },
