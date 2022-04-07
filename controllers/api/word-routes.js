@@ -58,13 +58,13 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => { //again, should we search by word? Depends if the button is attached to the entry <card>
-    Word.update(
-        {
+    Word.update(req.body,
+        /*{
             word: req.params.word
         },
         {
             definition: req.params.definition
-        },
+        },*/
         {
             where: {
                 id: req.params.id

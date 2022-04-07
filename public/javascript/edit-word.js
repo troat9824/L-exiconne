@@ -1,14 +1,17 @@
 async function editFormHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector(/*'input[name="post-title"]'*/).value.trim();
+    const word = document.querySelector(/*'input[name="word"]'*/).value.trim();
+    const definition = document.querySelector(/*'input[name="definition"]'*/).value;
+
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
     const response = await fetch(`/api/words/${id}`, {
       method: 'PUT',
       body: JSON.stringify({
-        title
+        word,
+        definition
       }),
       headers: {
         'Content-Type': 'application/json'

@@ -1,8 +1,9 @@
 async function newFormHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector(/*'input[name="post-title"]'*/).value;
-    const post_url = document.querySelector(/*'input[name="post-url"]'*/).value;
+    const word = document.querySelector(/*'input[name="word"]'*/).value;
+    const definition = document.querySelector(/*'input[name="definition"]'*/).value;
+    const user_id = document.querySelector(/*'input[name="user_id"]'*/).value;
   
     const response = await fetch(`/api/words`, {
       method: 'POST',
