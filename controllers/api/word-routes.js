@@ -21,10 +21,10 @@ router.get('/', (req, res) => {
 });
 
 // get one word
-router.get('/:word', (req, res) => { //should this be '/:word'?
+router.get('/:word', (req, res) => {
     Word.findOne({
         where: {
-            word: req.params.word //is this right? Since we aren't searching by id #?
+            word: req.params.word 
         },
         attributes: [
             'id',
@@ -44,10 +44,11 @@ router.get('/:word', (req, res) => { //should this be '/:word'?
 });
 
 router.post('/', (req, res) => {
-    // Expects { word: 'tintinabulation', definition: 'the sound of ringing bells' }
+    // Expects { word: 'tintinabulation', definition: 'the sound of ringing bells', user_id: 1 }
     Word.create({
         word: req.body.word,
-        definition: req.body.definition
+        definition: req.body.definition,
+        user_id: req.body.user_id
     })
     .then(dbWordData => res.json(dbWordData))
     .catch(err => {
