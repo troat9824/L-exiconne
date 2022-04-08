@@ -1,4 +1,4 @@
-async function newFormHandler(event) {
+async function newFEntryHandler(event) {
     event.preventDefault();
   
     const word = document.querySelector(/*'input[name="word"]'*/).value;
@@ -24,4 +24,4 @@ async function newFormHandler(event) {
     }
   }
   
-  document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
+  document.querySelector('#create-entry-btn').addEventListener('submit', newEntryHandler);
