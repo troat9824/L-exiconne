@@ -32,6 +32,11 @@
     <div class="intro">
         <p>L'exiconne is a personal, flexible lexicon.</p>
     </div>
+    {{#if loggedIn}}
+    <div id="create_entry">
+        <button id="create_entry_btn" class="btn-no-style">Create Entry</button>
+    </div>
+    {{/if}}
     <main>
         <!-- <div id="word"></div>
         <div id="definition"></div> -->
