@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS  l-exiconne_db;
+DROP DATABASE IF EXISTS  lexiconne_db;
 
-CREATE DATABASE  l-exiconne_db;
+CREATE DATABASE  lexiconne_db;
