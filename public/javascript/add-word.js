@@ -1,9 +1,9 @@
 async function newFEntryHandler(event) {
     event.preventDefault();
   
-    const word = document.querySelector(/*'input[name="word"]'*/).value;
-    const definition = document.querySelector(/*'input[name="definition"]'*/).value;
-    const user_id = document.querySelector(/*'input[name="user_id"]'*/).value;
+    const word = document.querySelector('input[name="word"]').value;
+    const definition = document.querySelector('input[name="definition"]').value;
+    const user_id = document.querySelector('input[name="user_id"]').value;
   
     const response = await fetch(`/api/words`, {
       method: 'POST',
