@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <link href="./assets/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>L'exiconne</title>
 </head>
 
@@ -17,7 +18,7 @@
         <h1>L'exiconne</h1>
         <nav>
             {{#if loggedIn}}
-            <a href="/dashboard">dashboard</a>
+            <!-- <a href="/dashboard">dashboard</a> -->
              <button id="logout" class="btn-no-style">logout</button>
             {{else}}
             <!--<input type="text" id="username-login" placeholder="Username">
@@ -34,23 +35,37 @@
     </div>
     {{#if loggedIn}}
     <div id="create_entry">
+        <input type="text" id="enter-word" placeholder="Enter word">
+        <input type="text" id="enter-def" placeholder="Enter definition">
         <button id="create-entry-btn" class="btn-no-style">Create Entry</button>
     </div>
     {{/if}}
+    <div id="searchbar">
+        <input type="text" id="enter-search" placeholder="Search">
+        <button id="search-entry-btn" class="btn-no-style">Search</button>
+    </div>
     <main>
-        <!-- <div id="word">WORD</div>
-        <div id="definition"></div> -->
-        {{{ body }}}
+        <section>
+            <h2>Your Words</h2>
+            <ul>
+                {{#each words as |word|}}
+                <li>
+                {{> entry-info word}}
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+       <!-- {{{ body }}} -->
     </main>
 
 
     <footer>
         <section id="credit">
-            <h1 class="credit-h1">Made By:</h1>
-            <h2 class="name">Franklin Brown</h2>
-            <h2 class="name">Giovanna Roach</h2>
-            <h2 class="name">Angel Sanchez</h2>
-            <h2 class="name">Taylor Vaughn</h2>
+            <h3 class="credit-h1">Made By:</h3>
+            <h4 class="name">Franklin Brown</h4>
+            <h4 class="name">Giovanna Roach</h4>
+            <h4 class="name">Angel Sanchez</h4>
+            <h4 class="name">Taylor Vaughn</h4>
         </section>
     </footer>
 

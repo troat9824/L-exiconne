@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Word, User } = require('../models');
+const withAuth = require('../utils/auth');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
@@ -35,7 +36,7 @@ router.get('/', (req, res) => {
 });
 
 // get single post
-router.get('/word/:id', (req, res) => { //are we grabbing words by id or by word?
+router.get('/word/:word', (req, res) => {
   Word.findOne({
     where: {
       id: req.params.id
