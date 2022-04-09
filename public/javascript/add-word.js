@@ -1,4 +1,4 @@
-async function newFEntryHandler(event) {
+async function newEntryHandler(event) {
     event.preventDefault();
   
     const word = document.querySelector('input[name="word"]').value;
