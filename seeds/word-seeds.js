@@ -2,58 +2,58 @@ const { Word } = require('../models');
 
 const wordData = [
     {
-        word: 'twink',
-        definition: 'someone who looks like they are going to get broken in half by a light breeze',
+        word: 'LOL',
+        definition: ' Laugh out loud',
         user_id: 1
     },
     {
-        word:'tintinabulation',
-        definition:'the sound of the ringing of bells',
+        word:'LMAO',
+        definition:'Laughing my ass off',
         user_id: 2
     },
     {
-        word: 'floccinoccinihilipilification',
-        definition: 'the act of declaring something is worthless',
+        word: 'Clapped',
+        definition: 'You or the person refered to is ugly',
         user_id: 3
     },
     {
-        word: 'mezzo',
-        definition: 'medium',
+        word: 'No Cap',
+        definition: 'a means of saying “no lie,” “no joke,” or “for real.',
         user_id: 4
     },
     {
-        word: 'anthurium',
-        definition:'an aroid with large, plasticky infloresences',
+        word: 'On God',
+        definition:'I swear Im not lying',
         user_id: 5
     },
     {
-        word: 'glitter',
-        definition: 'the physical manifestation of dreams',
+        word: 'Lowkey',
+        definition: 'a way of describing something that may be a mild feeling or desire',
         user_id: 1
     },
     {
-        word: 'ovine',
-        definition: 'pertaining to sheep',
+        word: 'Highkey',
+        definition: 'used to describe a strong desire, or something that is deserving of emphasis',
         user_id: 2
     },
     {
-        word: 'chemolithoautotroph',
-        definition:'these little pseudo-bacteria that live off of rock in the crust of the Earth',
+        word: 'Slaps',
+        definition:'an adjective to describe something that is really good, amazing, or excellent',
         user_id: 3
     },
     {
-        word:'terkw-',
-        definition: 'Proto-Indo-European root for turn',
+        word:'Sus',
+        definition: 'short for “suspicious” or “suspect',
         user_id: 4
     },
     {
-        word: 'ballsy',
-        definition: 'risky, brave, confident',
+        word: 'Lit',
+        definition: 'Amazing, exciting, or cool',
         user_id: 5
     },
     {
-        word: 'kriechenden Schnecken',
-        definition:'German for creeping snails',
+        word: 'XRP',
+        definition:'The best crypto currency',
         user_id: 1
     }
 ];
