@@ -1,7 +1,7 @@
 # L'exiconne
 
   ## Description 
-  A personal, flexible lexicon. 
+  Make your own dictionary with a personal, flexible lexicon. 
 
   ## Table of Contents
   * [Installation](#installation)
