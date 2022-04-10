@@ -4,7 +4,7 @@ const { Word, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for homepage
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   console.log('======================');
   Word.findAll({
     attributes: [
@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
 });
 
 // get single post
-router.get('/word/:word', (req, res) => {
+router.get('/word/:word', withAuth, (req, res) => {
   Word.findOne({
     where: {
       id: req.params.id

@@ -15,7 +15,7 @@
 
 <body class="bg-black">
     <header>
-        <h1>L'exiconne</h1>
+        <h1 class="text-warning">L'exiconne</h1>
         <nav>
             {{#if loggedIn}}
             <!-- <a href="/dashboard">dashboard</a> -->
@@ -39,11 +39,12 @@
         <input type="text" id="enter-def" placeholder="Enter definition">
         <button id="create-entry-btn" class="btn-no-style">Create Entry</button>
     </div>
-    {{/if}}
+    
     <div id="searchbar">
         <input type="text" id="enter-search" placeholder="Search">
         <button id="search-entry-btn" class="btn-no-style">Search</button>
     </div>
+    {{/if}}
     <main>
         <section>
             {{{ body }}}
