@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+   
+    <div class="modal fade" id="Edit" tabindex="-1" role="dialog" aria-labelledby="exampleEditWord" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleEditWord">Edit Word <span id="editDefinition"></span></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true"></span>
+                              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="new-definition">
+                  <label for="new-definition" class="form-control-label">New Word:</label>
+                  <input type="text" class="form-control" id="new-definition">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" id="submit-form-Bank">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="btn btn-success bank" type="button" data-target="#Edit" value="">
+      Edit Word
+      </button>
+    <!--  This code allows access to another button such as edit definition we can change what it says as we want
+        
+        <button class="btn btn-success bank" type="button" data-target="#editDefinition" value="">
+        Edit Definition
+        </button>
+    
+    -->
+      
+    
+    <script src="main.js"></script>
+</body>
+</html>
+
