@@ -47,7 +47,7 @@
     <div id="create_entry">
         <input type="text" id="enter-word" placeholder="Enter word">
         <input type="text" id="enter-def" placeholder="Enter definition">
-        <button id="create-entry-btn" class="btn-no-style">Create Entry</button>
+        <button class="create-entry-btn btn-no-style">Create Entry</button>
     </div>
     <!-- Search bar -->
     <div id="searchbar">
@@ -81,9 +81,9 @@
 
         </section>
     </footer>
-
-
-    <script src="your_path/choreographer.min.js"></script>
+      {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
 </body>
 
 </html>
