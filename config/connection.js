@@ -9,7 +9,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   port: 3306
 }); */
 
-const { Sequelize } = require("sequelize/types");
+const { Sequelize } = require("sequelize");
 
 let sequelize;
 
