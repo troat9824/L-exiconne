@@ -1,11 +1,7 @@
 const { Word } = require('../models');
 
 const wordData = [
-    {
-        word: 'twink',
-        definition: 'someone who looks like they are going to get broken in half by a light breeze',
-        user_id: 1
-    },
+
     {
         word:'tintinabulation',
         definition:'the sound of the ringing of bells',

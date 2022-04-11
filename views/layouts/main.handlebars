@@ -43,12 +43,13 @@
             Just sign in and add your personal definitions to words you've heard or even made up!</p>
     </div>
     {{#if loggedIn}}
+    <!-- Create new Entry --> 
     <div id="create_entry">
         <input type="text" id="enter-word" placeholder="Enter word">
         <input type="text" id="enter-def" placeholder="Enter definition">
         <button id="create-entry-btn" class="btn-no-style">Create Entry</button>
     </div>
-    
+    <!-- Search bar -->
     <div id="searchbar">
         <input type="text" id="enter-search" placeholder="Search">
         <button id="search-entry-btn" class="btn-no-style">Search</button>
@@ -56,6 +57,7 @@
     {{/if}}
     <main>
         <section>
+            <!-- This is where the list of entries goes -->
             {{{ body }}}
         </section>
        

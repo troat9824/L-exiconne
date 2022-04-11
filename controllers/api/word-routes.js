@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
     Word.create({
         word: req.body.word,
         definition: req.body.definition,
-        user_id: req.body.user_id
+        //user_id: req.body.user_id
     })
     .then(dbWordData => res.json(dbWordData))
     .catch(err => {
