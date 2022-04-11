@@ -34,7 +34,8 @@ header h1 {
 }
 body {
     background-image: url(./Images/bigger-background.jpg);
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat; 
+    background-attachment: fixed;  
 }
 
 main {
