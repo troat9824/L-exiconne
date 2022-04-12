@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Word, User } = require('../models');
+const withAuth = require('../utils/auth');
 
 // get all posts for homepage
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
   console.log('======================');
   Word.findAll({
     attributes: [
@@ -35,7 +36,7 @@ router.get('/', (req, res) => {
 });
 
 // get single post
-router.get('/word/:id', (req, res) => { //are we grabbing words by id or by word?
+router.get('/word/:word', withAuth, (req, res) => {
   Word.findOne({
     where: {
       id: req.params.id
@@ -81,5 +82,18 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+// logout
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+});
+
 
 module.exports = router;

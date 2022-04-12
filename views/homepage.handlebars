@@ -1,7 +1,19 @@
-<ol class="word-list">
-  {{#each entrys as |entry|}}
-  <li>
-    {{> entry-info entry }}
+<h2 class="text-info">Your Words</h2>
+<br>
+<!-- Create new Entry --> 
+<div id="create_entry">
+    <input type="text" id="enter-word" placeholder="Enter word">
+    <input type="text" id="enter-def" placeholder="Enter definition">
+    <button class="create-entry-btn btn-no-style">Create Entry</button>
+</div>
+<br>
+<ul class="word-list list-group list-group-flush">
+  {{#each words as |word|}}
+  <li class="container-md">
+    {{> entry-info word }}
   </li>
+  <br>
   {{/each}}
-</ol>
+</ul>
+
+<script src="javascript/add-word.js"></script>

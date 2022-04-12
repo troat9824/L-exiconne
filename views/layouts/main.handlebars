@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <link href="./assets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css" >
     <title>L'exiconne</title>
 </head>
 
-<body>
+<body class="bg-black">
     <header>
-        <h1>L'exiconne</h1>
+        <h1>
+            <font color="#FF2626">L</font>
+            <font color="#252A34">'</font>
+            <font color="#753422">e</font>
+            <font color="#FFD523">x</font>
+            <font color="#71EFA3">i</font>
+            <font color="#0F52BA">c</font>
+            <font color="#66CC66">o</font>
+            <font color="#FF9966">n</font>
+            <font color="#FFCCCC">n</font>
+            <font color="#00C1D4">e</font>
+        </h1>
         <nav>
             {{#if loggedIn}}
-            <a href="/dashboard">dashboard</a>
              <button id="logout" class="btn-no-style">logout</button>
             {{else}}
-            <!--<input type="text" id="username-login" placeholder="Username">
-            <input type="password" id="password-login" placeholder="Password">
-            <button id="login">Login</button> this will all be in the Login partial, I think-->
             <a href="/login">login</a>
             {{/if}}
         </nav>
@@ -30,31 +38,47 @@
     </header>
     
     <div class="intro">
-        <p>L'exiconne is a personal, flexible lexicon.</p>
+        <p>Words your own way! <br>
+            L'exiconne is a personal, flexible lexicon. <br>
+            Just sign in and add your personal definitions to words you've heard or even made up!</p>
     </div>
     {{#if loggedIn}}
-    <div id="create_entry">
-        <button id="create-entry-btn" class="btn-no-style">Create Entry</button>
+    
+    <!-- Search bar -->
+    <div id="searchbar">
+        <input type="text" id="enter-search" placeholder="Search">
+        <button id="search-entry-btn" class="btn-no-style">Search</button>
     </div>
     {{/if}}
     <main>
-        <!-- <div id="word">WORD</div>
-        <div id="definition"></div> -->
-        {{{ body }}}
+        <section>
+            <!-- This is where the list of entries goes -->
+            {{{ body }}}
+        </section>
+       
     </main>
 
 
     <footer>
         <section id="credit">
-            <h1 class="credit-h1">Made By:</h1>
-            <h2 class="name">Franklin Brown</h2>
-            <h2 class="name">Giovanna Roach</h2>
-            <h2 class="name">Angel Sanchez</h2>
-            <h2 class="name">Taylor Vaughn</h2>
+            <div class="container">
+                <div class="row justify-content-center align-items-end">
+                    <h1 class="credit-h1 col-4">Made By:</h1>
+                </div>
+                <div class="row justify-content-center align-items-end">
+                    <h2 class="name col-3">Franklin Brown</h2>
+                    <h2 class="name col-3">Giovanna Roach</h2>
+                    <h2 class="name col-3">Angel Sanchez</h2>
+                    <h2 class="name col-3">Taylor Vaughn</h2>
+                </div>
+            </div>
+
+
         </section>
     </footer>
-
-    <script src=""></script>
+      {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
 </body>
 
 </html>

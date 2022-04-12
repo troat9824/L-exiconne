@@ -6,6 +6,7 @@ const wordData = [
         definition: ' Laugh out loud',
         user_id: 1
     },
+
     {
         word:'LMAO',
         definition:'Laughing my ass off',

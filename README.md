@@ -1,7 +1,7 @@
 # L'exiconne
 
   ## Description 
-  A personal, flexible lexicon. 
+  Make your own dictionary with a personal, flexible lexicon. 
 
   ## Table of Contents
   * [Installation](#installation)
@@ -12,9 +12,21 @@
   * [Questions](#questions)
   
   ## Installation 
-    
+    You will need the following libraries:
+    * express
+    * path
+    * express-session
+    * express-handlebars
+    * connect-session-sequelize
+    * mysql2
+    * bcrypt
+    * choreographer-js
+    * dotenv
+    * sequelize
+
   
   ## Usage 
+  You will need a .env to create the lexiconne_db database, a username (root) and password. To initialize, open the CRM and run "mysql -u root -p". Enter your password. Then USE lexiconne_db; . Then source from db/schema.sql. (Occassionally, I have had to source the absolute path.) In your code editor, run "npm run seed" to seed the app. A validation message should appear. Then run "npm start" to start the app. 
 
 
   ## License 
