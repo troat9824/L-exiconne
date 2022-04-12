@@ -2,6 +2,7 @@
 
   ## Description 
   Make your own dictionary with a personal, flexible lexicon. 
+  https://cryptic-chamber-15653.herokuapp.com/
 
   ## Table of Contents
   * [Installation](#installation)
